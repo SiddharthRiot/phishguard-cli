@@ -44,6 +44,8 @@ Example scan:
 Choose an option:
 1. Scan a website
 2. Phishing Awareness Demo
+3. Phishing Kit (Lab / Research)
+Ctrl+C to Exit
 
 Choice ➜ 1
 
